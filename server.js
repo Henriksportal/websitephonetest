@@ -2,33 +2,33 @@ const express = require("express");
 const { google } = require("googleapis");
 
 
-// const app = express();
-// const port = 8080;
-
-// app.use(express.json());
-// app.use(express.static('public'));
-
-
-
-// async function authSheets() {
-//     const auth = new google.auth.GoogleAuth({
-//         keyFile:"keys.json",
-//         scopes: ["https://www.googleapis.com/auth/spreadsheets"],
-//     });
-
-
-
 const app = express();
-const port = process.env.PORT || 8080; // Use Render's port or fallback
+const port = 8080;
 
 app.use(express.json());
 app.use(express.static('public'));
 
+
+
 async function authSheets() {
     const auth = new google.auth.GoogleAuth({
-        credentials: JSON.parse(process.env.GOOGLE_SHEETS_CREDENTIALS), // Get from env var
+        keyFile:"keys.json",
         scopes: ["https://www.googleapis.com/auth/spreadsheets"],
     });
+
+
+
+// const app = express();
+// const port = process.env.PORT || 8080; // Use Render's port or fallback
+
+// app.use(express.json());
+// app.use(express.static('public'));
+
+// async function authSheets() {
+//     const auth = new google.auth.GoogleAuth({
+//         credentials: JSON.parse(process.env.GOOGLE_SHEETS_CREDENTIALS), // Get from env var
+//         scopes: ["https://www.googleapis.com/auth/spreadsheets"],
+//     });
 
     const authClient = await auth.getClient();
 
