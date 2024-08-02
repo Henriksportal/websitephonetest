@@ -85,8 +85,8 @@ p {
 }
 
 #map {
-  border: solid #ffd6a5;
-  ;
+/*   border: solid #ffd6a5; */
+  border: solid black;
   height: 100%; 
   width: 50%;
 }
