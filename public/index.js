@@ -18,8 +18,7 @@ fetch('/fish-data')
 
   });
 
-
-
+console.log("hello");
 
 async function initMap(data) {  
 
