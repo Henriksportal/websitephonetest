@@ -60,7 +60,7 @@ function responseToObjects(res) {
     }
     data.push(rowObject);
   }
-  return initMapdata;
+  return initMapdata(data);
 }
 
 
