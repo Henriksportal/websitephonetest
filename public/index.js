@@ -1,67 +1,22 @@
-// let highlightedMarker = null;
-// fetch('/fish-data')
-//   .then(response => response.json())
-//   .then(data => {
-//     // Extract headers
-//     const headers = data.values[0];
+let highlightedMarker = null;
+fetch('/fish-data')
+  .then(response => response.json())
+  .then(data => {
+    // Extract headers
+    const headers = data.values[0];
 
-//     // Transform data.values directly into array of objects
-//     data.values = data.values.slice(1).map(row => {
-//       const obj = {};
-//       for (let i = 0; i < headers.length; i++) {
-//         obj[headers[i]] = row[i];
-//       }
-//       return obj;
-//     });
-
-//     initMap(data.values);
-
-//   });
-
-function getSheetData({ sheetID, sheetName, query }) {
-  const base = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?`;
-  const url = `${base}&sheet=${encodeURIComponent(sheetName)}&tq=${encodeURIComponent(query)}`;
-
-  return fetch(url) // Return a Promise
-    .then(res => {
-      if (!res.ok) {
-        throw new Error(`Error fetching data: ${res.status} ${res.statusText}`);
+    // Transform data.values directly into array of objects
+    data.values = data.values.slice(1).map(row => {
+      const obj = {};
+      for (let i = 0; i < headers.length; i++) {
+        obj[headers[i]] = row[i];
       }
-      return res.text();
-    })
-    .then(responseToObjects); // Return the processed data
-}
+      return obj;
+    });
 
+    initMap(data.values);
 
-function responseToObjects(res) {
-  // credit to Laurence Svekis https://www.udemy.com/course/sheet-data-ajax/
-  const jsData = JSON.parse(res.substring(47).slice(0, -2));
-  let data = [];
-  const columns = jsData.table.cols;
-  const rows = jsData.table.rows;
-  let rowObject;
-  let cellData;
-  let propName;
-  for (let r = 0, rowMax = rows.length; r < rowMax; r++) {
-    rowObject = {};
-    for (let c = 0, colMax = columns.length; c < colMax; c++) {
-      cellData = rows[r]["c"][c];
-      propName = columns[c].label;
-      if (cellData === null) {
-        rowObject[propName] = "";
-      } else if (
-        typeof cellData["v"] == "string" &&
-        cellData["v"].startsWith("Date")
-      ) {
-        rowObject[propName] = new Date(cellData["f"]);
-      } else {
-        rowObject[propName] = cellData["v"];
-      }
-    }
-    data.push(rowObject);
-  }
-  return initMapdata(data);
-}
+  });
 
 
 
