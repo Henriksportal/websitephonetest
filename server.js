@@ -13,7 +13,7 @@ async function authSheets() {
     const auth = new google.auth.GoogleAuth({
       credentials: {
         client_email: process.env.GOOGLE_SHEETS_CLIENT_EMAIL, // From environment variable
-        private_key: process.env.GOOGLE_SHEETS_CREDENTIALS_KEY,   // From environment variable
+        private_key: process.env.GOOGLE_SHEETS_CREDENTIALS_KEY.split(String.raw`\n`).join('\n'),   // From environment variable
       },
       scopes: ["https://www.googleapis.com/auth/spreadsheets"],
     });
