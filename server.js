@@ -1,7 +1,6 @@
 require('dotenv').config();  // Load environment variables
 const express = require("express");
 const { google } = require("googleapis");
-console.log("GOOGLE_SHEETS_CLIENT_EMAIL:", process.env.GOOGLE_SHEETS_CREDENTIALS_KEY);
 const app = express();
 // Use the port provided by Render, or default to 3000
 const port = process.env.PORT || 3000;
