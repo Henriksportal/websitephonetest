@@ -21,57 +21,6 @@ h1 {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 html,
 body {
   height: 100%;
@@ -85,8 +34,7 @@ p {
 }
 
 #map {
-/*   border: solid #ffd6a5; */
-  border: solid black;
+  border: solid #ffd6a5; 
   height: 100%; 
   width: 50%;
 }
