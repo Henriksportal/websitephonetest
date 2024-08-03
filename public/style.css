@@ -36,7 +36,7 @@ p {
 #map {
   border: solid #ffd6a5; 
   height: 100%; 
-  width: 50%;
+  width: 100%;
 }
 
 .container-map {
