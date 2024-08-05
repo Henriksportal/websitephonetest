@@ -21,6 +21,57 @@ h1 {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 html,
 body {
   height: 100%;
@@ -34,7 +85,8 @@ p {
 }
 
 #map {
-  border: solid #ffd6a5; 
+  border: solid #ffd6a5;
+  ;
   height: 100%; 
   width: 100%;
 }
@@ -91,9 +143,7 @@ p {
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
   height: auto;
   padding: 8px 15px;
-  width: 25em;
-  /* /* max-width: 20em; */
-  /* max-height: 12em;  */
+  max-width: 25em;
   width: auto;
   z-index: 9999;
   /* user-select: auto !important; */
@@ -210,7 +260,7 @@ p {
   
 }
 .event .info {
-  display: inline;
+  display: grid;
 }
 
 
@@ -218,7 +268,8 @@ p {
 .event .phoneNumber {
   font-size: 0.6em;
   display: inline;
-  padding-left: 10em;
+
+  padding-top: 0.5em;
   
   letter-spacing: 0.1em;
 }
@@ -226,23 +277,39 @@ p {
   display: inline;
   color: #5b5b5b;
   font-size: 0.75em;
-  margin-bottom: 10px;
-  margin-top: 5px;
+  
+  margin-top: 0.5em;
 
 }
+
+
 
 .event .text-container {
   max-width: 15em;
   max-height: 5em;
   /* padding-top: 0.25em; */
   overflow: auto;
+  display: grid;
 }
 
-.event .description {
-  font-size: 12px; /* Adjust font size as needed */
-  margin-bottom: 10px; /* Add some spacing */
-  word-wrap: break-word !important;
+
+
+.event .eventMood {
+  padding-top: 1em;
+  font-size: 0.75em;
 }
+.event .eventVenue {
+  
+  font-size: 0.75em;
+}
+.event .eventInfo {
+  padding-top: 0.5em;
+  font-size: 0.75em;
+}
+
+
+
+
 
 .event .features {
   align-items: flex-end;
@@ -421,7 +488,7 @@ p {
 
 }
 .event.musicType-HipHop.highlight::after {
-  border-top: 9px solid #fdffb6 !important; 
+  border-top: 9px solid #ffffed !important; 
   top: 99%;
 
 }

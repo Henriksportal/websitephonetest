@@ -19,6 +19,8 @@ fetch('/fish-data')
   });
 
 
+
+
 async function initMap(data) {  
 
 
@@ -26,11 +28,6 @@ async function initMap(data) {
   const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker");
 
-
-  // const [Map, AdvancedMarkerElement] = await Promise.all([
-  //   google.maps.importLibrary("maps"),
-  //   google.maps.importLibrary("marker")
-  // ]);
   // 1. Get User Location (with Permission Check)
   let userPosition;
 
@@ -223,7 +220,6 @@ function buildContent(event) {
 }
 
 
-
 content.innerHTML = `
 <div class="icon">
 
@@ -232,14 +228,15 @@ content.innerHTML = `
 </div>
 <div class="details">
     <div class="eventTitle" id="${typeColorVar}">${event.TITLE}</div>
+
   <div class="info"> 
     <a href="https://maps.google.com/?q=${Number(event.LAT)},${Number(event.LNG)}" class="address">${event.ADDRESS} </a>
-    <div class="phoneNumber"> ${event.NUMBER} </div>
+    <a href="tel:${event.NUMBER}"class="phoneNumber"> ${event.NUMBER} </a>
   </div> 
-  <p>About:</p>
-  <div class="text-container">
-    <div class="description">${event.DESCRIPTION} </div>
-  </div>
+  <div class="eventMood">Mood: ${event.MOOD}</div>
+  <div class="eventVenue">Venue: ${event.VENUE}</div>
+   ${event.INFO ? `<div class="eventInfo">Info: ${event.INFO}</div>` : ''}
+
   <div class="horizontal-line"></div>
     <div class="features">
 <div class="details">
@@ -251,7 +248,14 @@ content.innerHTML = `
     </div>
 </div>
 `;
+
+
+
+
 return content;
+
+
+
 }
 
 
