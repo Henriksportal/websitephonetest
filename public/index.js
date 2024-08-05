@@ -159,7 +159,7 @@ function buildContent(event) {
 
 
   //switch case deciding what color the marker is
-  switch (event.TYPE) {
+  switch (event.GENRE) {
     case "Jazz":
         content.classList.add("musicType-Jazz");
         typeColorVar = "jazzColor";
