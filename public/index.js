@@ -227,7 +227,7 @@ function buildContent(event) {
 content.innerHTML = `
 <div class="icon">
 
-    <img id="imgIcon" src="${event.TYPE}.svg" alt="${event.TYPE}" title="${event.TYPE}";>
+    <img id="imgIcon" src="${event.GENRE}.svg" alt="${event.GENRE}" title="${event.GENRE}";>
     <span id="${typeColorVar}">${event.GENRE}</span>
 </div>
 <div class="details">
