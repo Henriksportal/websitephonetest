@@ -108,13 +108,14 @@ p {
   display: flex;
   font-size: 14px;
   gap: 15px;
-  height: 3em;
+  height: 2.5em;
+  width: 2.5em;
   justify-content: center;
   padding: 4px;
   position: relative;
   position: relative;
   transition: all 0.3s ease-out;
-  width: 3em;
+
   
   /* border: 1px solid white; */
   
