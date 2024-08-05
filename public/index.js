@@ -61,8 +61,24 @@ async function initMap(data) {
     mapId: "b0a68813e3ded0db", // Replace with your actual Map ID
   });
 
-  
 
+  const myLocationIcon = document.createElement('img');
+  myLocationIcon.src = '/danceMan.svg';
+  myLocationIcon.classList.add('my-location-icon');
+
+
+  const marker = new google.maps.marker.AdvancedMarkerElement({
+    map: map,
+    content: myLocationIcon,
+    position: userPosition,
+    title: 'You',
+    
+  });
+
+
+
+  
+  //title
   const titleControlDiv = document.createElement('div');
   titleControlDiv.classList.add('text-body'); // Add the class here
   titleControlDiv.innerHTML = '<h1><span class="text-content">LULALA</span></h1>'; 
@@ -70,6 +86,8 @@ async function initMap(data) {
 
   const mapContainer = document.getElementById("map");
   mapContainer.appendChild(titleControlDiv);
+  
+  
 
 
 
@@ -218,6 +236,7 @@ function buildContent(event) {
         content.classList.add("nomarker");
         // No class added for the default (blue) state 
 }
+
 
 
 content.innerHTML = `
