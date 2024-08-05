@@ -108,13 +108,13 @@ p {
   display: flex;
   font-size: 14px;
   gap: 15px;
-  height: 30px;
+  height: 3em;
   justify-content: center;
   padding: 4px;
   position: relative;
   position: relative;
   transition: all 0.3s ease-out;
-  width: 30px;
+  width: 3em;
   
   /* border: 1px solid white; */
   
@@ -231,7 +231,7 @@ p {
 .event .icon svg {
   height: 1.5em;
   width: auto;
-  fill: currentColor;
+  /* fill: currentColor; */
 
 }
 
@@ -239,7 +239,7 @@ p {
 .event.highlight .icon svg {
   height: 1.5em;
   width: auto;
-  fill: currentColor;
+  /* fill: currentColor; */
 }
 
 .event .eventTitle {
