@@ -227,16 +227,18 @@ content.innerHTML = `
     <span id="${typeColorVar}">${event.GENRE}</span>
 </div>
 <div class="details">
-    <div class="eventTitle" id="${typeColorVar}">${event.TITLE}</div>
+     <a href="https://maps.google.com/?q=${Number(event.LAT)},${Number(event.LNG)}" class="eventTitle" id="${typeColorVar}">${event.TITLE}</a>
 
   <div class="info"> 
     <a href="https://maps.google.com/?q=${Number(event.LAT)},${Number(event.LNG)}" class="address">${event.ADDRESS} </a>
-    <a href="tel:${event.NUMBER}"class="phoneNumber"> ${event.NUMBER} </a>
-  </div> 
-  <div class="eventMood">Mood: ${event.MOOD}</div>
-  <div class="eventVenue">Venue: ${event.VENUE}</div>
-   ${event.INFO ? `<div class="eventInfo">Info: ${event.INFO}</div>` : ''}
 
+    <div class="eventMood">Mood: ${event.MOOD}</div>
+    <div class="eventVenue">Venue: ${event.VENUE}</div>
+    ${event.INFO ? `<div class="eventInfo">Info: ${event.INFO}</div>` : ''}
+    <div class="numContainer">
+    <div class="contactText">Contact: &nbsp</div><a href="tel:${event.NUMBER}"class="phoneNumber"> ${event.NUMBER} </a>
+    </div>
+  </div> 
   <div class="horizontal-line"></div>
     <div class="features">
 <div class="details">

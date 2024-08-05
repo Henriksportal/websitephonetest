@@ -259,20 +259,32 @@ p {
   font: bold;
   
 }
+
+
+
 .event .info {
   display: grid;
 }
 
+.event .numContainer {
+  display: inline-flex;
+}
 
+
+.event .contactText {
+  padding-top: 0.5em;
+  font-size: 0.6em;
+  display: inline;
+}
 
 .event .phoneNumber {
   font-size: 0.6em;
   display: inline;
-
   padding-top: 0.5em;
-  
   letter-spacing: 0.1em;
 }
+
+
 .event .address {
   display: inline;
   color: #5b5b5b;
@@ -281,18 +293,6 @@ p {
   margin-top: 0.5em;
 
 }
-
-
-
-.event .text-container {
-  max-width: 15em;
-  max-height: 5em;
-  /* padding-top: 0.25em; */
-  overflow: auto;
-  display: grid;
-}
-
-
 
 .event .eventMood {
   padding-top: 1em;
