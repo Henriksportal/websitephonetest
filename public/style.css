@@ -85,10 +85,9 @@ p {
 }
 
 #map {
-  border: solid #ffd6a5;
-  ;
   height: 100%; 
   width: 100%;
+  user-select: none;
 }
 
 .container-map {
@@ -250,6 +249,7 @@ p {
   font-size: 1.7em;
   letter-spacing: 0.1em;
   font-family: funkyFont;
+  text-decoration: none;
 }
 
 
@@ -265,6 +265,7 @@ p {
 
 .event .info {
   display: grid;
+    
 }
 
 .event .numContainer {
@@ -276,6 +277,7 @@ p {
   padding-top: 0.5em;
   font-size: 0.6em;
   display: inline;
+
 }
 
 .event .phoneNumber {
@@ -617,3 +619,5 @@ p {
 .gm-style a[href^="https://maps.google.com/maps"] {
   display: none !important;
 }
+
+.gm-style iframe + div { border:none!important; }
