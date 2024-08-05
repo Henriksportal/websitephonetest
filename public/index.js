@@ -228,7 +228,7 @@ content.innerHTML = `
 <div class="icon">
 
     <img id="imgIcon" src="${event.TYPE}.svg" alt="${event.TYPE}" title="${event.TYPE}";>
-    <span id="${typeColorVar}">${event.TYPE}</span>
+    <span id="${typeColorVar}">${event.GENRE}</span>
 </div>
 <div class="details">
     <div class="eventTitle" id="${typeColorVar}">${event.TITLE}</div>
